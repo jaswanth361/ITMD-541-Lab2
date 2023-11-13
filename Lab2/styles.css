@@ -189,25 +189,22 @@
 
 
 
+
 /* Transition Part */
 
 #transition-section .box a {
 	display: inline-block;
 	background-color: #ccc;
 	color: #000;
+	transition-duration: 3s;
 	padding: 20px;
-	margin: auto;
 	text-decoration: none;
-	font-family: fantasy;
 }
 
-	#transition-section .box a:hover {
-		background-color: #b8cc00;
-		color: rgb(255, 255, 255);
-		border-radius: 50%;
-		border: none;
-		margin-left: 20px;
-		font-family: papyrus;
-	}
+#transition-section .box a:hover {
+	background-color: #cc0000;
+	color: #fff;
+	transition-duration: 0.5s;
+}
 
 /* end Transition Part */
