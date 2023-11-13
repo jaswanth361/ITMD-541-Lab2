@@ -1,14 +1,25 @@
 /* Flexbox Part 1 */
 
+/* Flexbox Part 1 */
+
 #flex-section1 ul {
-	text-align: left;
-	color: yellowgreen;
-	background-color: sandybrown;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
 	margin: 10px;
-	padding: 20px 50px;
-	border-radius: 1em 50px 10px;
-	border: ridge 1em palevioletred;
 }
+
+#flex-section1 .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #db3434;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* end Flexbox Part 1 */
+
 
 /* end Flexbox Part 1 */
 
@@ -16,65 +27,88 @@
 /* Flexbox Part 2 */
 
 #flex-section2 ul {
-	border-radius: 2em;
-	border: groove 1em rgb(145, 255, 0);
-	background-color: rgb(102, 151, 153);
-	padding: 20px 50px;
-	margin: 10px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+	
 }
 
 #flex-section2 li {
-	padding: 10px;
-	margin: 15px;
-	border-style: solid;
-	background-color: rgb(221, 228, 156);
-	color: rgb(102, 198, 205);
-	border-radius: 5px 15px;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #070606;
+	font-weight: bold;
 }
 
 #flex-section2 .item1 {
-	font-family: papyrus;
-	font-size: medium;
+    order: 1;
 }
 
 #flex-section2 .item2 {
-	font-family: papyrus;
-	font-weight: 900;
+    order: 3;
 }
 
 #flex-section2 .item3 {
-	font-family: papyrus;
+    order: 2;
 }
 
 /* end Flexbox Part 2 */
 
 
+
 /* Flexbox Part 3 */
 
 #flex-section3 .box {
-	background-color: rgb(122, 209, 173);
-	margin: 5px;
-	padding: 20px 2px 2px 20px;
-	border-radius: 1em 15px 50px;
-	border: groove 1em rgb(114, 250, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#flex-section3 .card {
+    text-align: center;
+}
+
+#flex-section3 .card img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+#flex-section3 .tags {
+    margin-top: 10px;
 }
 
 #flex-section3 .tags ul {
-	margin-left: 10px;
-	padding: 25px;
-	background-color: rgb(235, 226, 110);
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 5px;
+}
+
+#flex-section3 .tags li {
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 5px;
+    border-radius: 5px;
 }
 
 /* end Flexbox Part 3 */
 
 
+
 /* Grid Part 1 */
 
 #grid-section1 .grid {
-	background-color: rgb(135, 235, 218);
-	margin: 20px;
-	padding: 15px;
-	border: groove 1em rgb(233, 204, 38);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#grid-section1 .greybox {
+    background-color: #f0f0f0;
+    padding: 40px; /* Adjust padding as needed */
+    text-align: left; /* Align text to the left */
 }
 
 /* end Grid Part 1 */
@@ -82,60 +116,77 @@
 
 /* Grid Part 2 */
 
+#grid-section2 .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    height: 100%; /* Ensure the grid takes the full height of the container */
+}
+
 #grid-section2 .gridboxblue {
-	border-radius: 20px 5px;
-	margin: 20px;
-	padding: 5px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+	width: 125%;
+	opacity: 0.9;
+    grid-column: span 2; /* Span 2 columns */
+    z-index: 1; /* Ensure the blue box is positioned above the red box */
 }
 
 #grid-section2 .gridboxred {
-	border-radius: 20px 5px;
-	margin: 20px;
-	padding: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 2; /* Span 2 rows */
 }
 
 /* end Grid Part 2 */
 
 
+
+
 /* Grid Part 3 */
 
 #grid-section3 .grid {
-	margin: 10px;
-	padding: 5px;
-	background-color: rgb(205, 155, 63);
-	border-radius: 10px 40px 40px 10px;
-	border: solid rgb(240, 23, 88) 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 column grid with the first column twice the width of the second column */
+    grid-template-rows: 100px 300px 100px; /* 3 rows with specified heights */
+    gap: 10px;
 }
 
 #grid-section3 .box1 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(216, 230, 176);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-column: span 2; /* Span 2 columns */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box2 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(152, 244, 251);
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box3 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(210, 176, 230);
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
 }
 
 #grid-section3 .box4 {
-	margin: 10px;
-	border-radius: 20px 5px;
-	background-color: rgb(152, 167, 251);
-	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    grid-column: span 1; /* Span 1 column */
+    grid-row: span 1; /* Span 1 row */
+    background-color: #ddd;
+    padding: 20px;
+	width: 150%;
 }
 
 /* end Grid Part 3 */
+
 
 
 /* Transition Part */
